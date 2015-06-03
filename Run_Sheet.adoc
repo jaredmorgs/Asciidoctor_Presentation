@@ -1,0 +1,95 @@
+= Working with AsciiDoc and Asciidoctor
+Jared Morgan <jaredleonmorgan@gmail.com>
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+
+== Installing Asciidoctor
+
+=== Linux
+
+`sudo dnf install asciidoctor` for RPM-based systems
+
+or
+
+`sudo apt-get install asciidoctor` for Debian-based systems
+
+=== Windows
+.Install Asciidoctor on Windows
+. Load http://rubyinstaller.org/[RubyInstaller] site and download the installer.
+. Once Ruby is installed, install Asciidoctor through the command line:
+`gem install asciidoctor`
+
+=== Mac
+Ruby is installed by default on Mac, but you need 1.9.2 at a minimum. See http://asciidoctor.org/docs/install-asciidoctor-macosx/ for different approaches to installing Asciidoctor on Mac.
+
+== How Do I Write in AsciiDoc
+AsciiDoc is just text. So you can write AsciiDoc documents in anything that you can write plain text in. There are some recommendations for Windows users, such as not using Notepad (due to some incompatible formatting it adds: yep even notepad adds cruft...)
+
+* Write in a text editor and preview in Chrome
+* Write offline in GUI Editors such as Atom.io
+* Write online directly in GitHub
+* Write offline in GitHub, commit changes when online, render to Asciidoctor automatically using Travis CI.
+
+=== Text Editor with Chrome Preview
+You can use a Google Chrome extension called +Asciidoctor.js Live Preview+ to render a local file in Asciidoctor. While it is available on Chrome and Firefox, the Chrome version also has the advantage of allowing you the choice of stylesheets. It's great for looking at a single file locally without the overhead of running a GUI editor. Quick and simple.
+
+.How To Install
+. Open Chrome's Web App Store
+. Search for Asciidoctor
+. Install the Extension.
+. Ensure you set the access to local files permission in `chrome://extensions`
+
+
+=== Atom.io Editor
+Atom Editor is free software compatible for Mac/Windows/Linux
+
+Get it at http://atom.io. It's free!
+
+==== AsciiDoc Packages
+The +asciidoc-preview+ package gives you a the rendered preview you are seeing in the App.
+
+.How To Install AsciiDoc Preview
+. Open Edit=>Preferences=>Packages
+. Search for `asciidoc-preview` and Install.
+. Alternativley , you can download the package from GitHub and add it to `~/.atom/packages`.
+
+.How To Use AsciiDoc Preview
+. Open an AsciiDoc file in Atom.
+. CTRL+SHIFT+A to show.
+
+If you want syntax highlighting for AsciiDoc files, install the +language-asciidoc+ package.
+
+.How To Install language-asciidoc
+. Open Edit=>Preferences=>Packages
+. Search for `language-asciidoc`.
+. Install it like +asciidoc-preview+
+
+=== On GitHub Through the Built-in Web Editor
+If you store your docs on GitHub, you can use the site's editor to write in AsciiDoc, and get a basic render of AsciiDoc text.
+
+If you also use a continuous build service like Travis CI, you can save your text and see it rendered in Asciidoctor within minutes.
+
+== AsciiDoctor Apps and Forkables
+Jekyll AsciiDoc Quickstart::
+  * Easy way to set up a static single doc site.
+	* Uses Travis-CI to build and stage your guide.
+  * Git-backed so you can write off-line.
+	* Free.
+
+HubPress Blogging Platform::
+  * Web app hosted on GitHub
+	* AsciiDoc using Asciidoctor.js as the converter.
+	* Free.
+
+== Publishing Using the AsciiDoctor Toolchain
+
+Publish to HTML::
+	`asciidoctor -a linkcss! index.adoc`
+Publish to PDF::
+	. http://asciidoctor.org/docs/convert-asciidoc-to-pdf/ for instructions.
+    * Ruby +gem+ available (only very recently), or
+    * Build from source (not as hard as you might think).
+  . Once installed, run the build command:
+
+    $ `asciidoctor-pdf filename.adoc`.
