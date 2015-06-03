@@ -10,7 +10,9 @@ example.adoc::
 
 == Video
 
-video::129621323[vimeo] or https://vimeo.com/129621323 if you can't see the embed in GitHub. This presentation starts about 20 minutes in.
+video::129621323[vimeo] 
+
+Or https://vimeo.com/129621323 if you can't see the embed in GitHub. The demos start about 20 minutes in.
 
 TIP: Build this file locally to HTML with asciidoctor to see how videos render in `.adoc` files
 
