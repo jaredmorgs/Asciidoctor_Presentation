@@ -1,4 +1,4 @@
-= Asciidoctor and Presentation
+= AsciiDoc and Asciidoctor Presentation
 Files relating to the AsciiDoc presentation showcasing HubPress and Asciidoctor technologies.
 
 == Files
