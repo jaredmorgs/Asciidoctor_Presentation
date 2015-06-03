@@ -1,6 +1,13 @@
 = Asciidoctor and Presentation
 Files relating to the AsciiDoc presentation showcasing HubPress and Asciidoctor technologies.
 
+== Files
+
+run-sheet.adoc:: 
+  The 'presentation' I displayed in the video.
+example.adoc::
+  A very simple AsciiDoc document you can experiment with.
+
 == Video
 
 video::129621323[vimeo] or https://vimeo.com/129621323 if you can't see the embed in GitHub. This presentation starts about 20 minutes in.
@@ -9,9 +16,19 @@ TIP: Build this file locally to HTML with asciidoctor to see how videos render i
 
   $ asciidoctor README.adoc
 
-== Files
+== Links
 
-run-sheet.adoc:: 
-  The 'presentation' I displayed in the video.
-example.adoc::
-  A very simple AsciiDoc document you can experiment with.
+Get Learning::
+  http://asciidoctor.org/ is the place to go to learn more about the fast text processor & publishing toolchain for converting AsciiDoc to HTML5, DocBook & more. On this landing page, you get links to all Asciidoctor Docs. It's a great resource I refer to regularly when writing. 
+
+Get Building::
+  https://github.com/jaredmorgs/Pinball_Arcade_Users_Guide_Android is an example of a complete user guide, with include statements and some more advanced AsciiDoc markup. You can practise building this locally by following the instructions in the https://github.com/jaredmorgs/Pinball_Arcade_Users_Guide_Android/blob/master/README.adoc[README.adoc] 
+
+Get Publishing::
+  https://github.com/asciidoctor/jekyll-asciidoc-quickstart is a forkable Jekyll site using AsciiDoc. It uses Travis-CI to automatically build and publish your book when you commit changes to the repository. Follow the instructions in the https://github.com/asciidoctor/jekyll-asciidoc-quickstart/blob/master/README.adoc[README.adoc] to get this set up for use. You can use the Users Guide above as a base for your guide, or not worry about includes and have one flat file. 
+
+Get Blogging::
+  https://github.com/HubPress/hubpress.io is a forkable Blogging app that uses asciidoctor.js as the transformation engine, and Ghostscript themes to style the blog posts. Follow the instructions in the https://github.com/HubPress/hubpress.io/blob/master/README.adoc[README.adoc] to configure the blog. 
+
+Default to Open::
+  All the links above are Free and Open Source (FOSS) projects created with collaboration in mind. If you want to contribute, fork the projects and start contributing. No contribution is too small: a bug fix to spelling, corrections to procedures, anything.
