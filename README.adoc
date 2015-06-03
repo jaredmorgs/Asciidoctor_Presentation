@@ -1,24 +1,41 @@
 = AsciiDoc and Asciidoctor Presentation
+Jared Morgan; Russell Dickenson
+
 Files relating to the AsciiDoc presentation showcasing HubPress and Asciidoctor technologies.
 
 == Files
 
-run-sheet.adoc:: 
+<<run-sheet#,run-sheet.adoc>>:: 
   The 'presentation' I displayed in the video.
-example.adoc::
+<<example#,example.adoc>>::
   A very simple AsciiDoc document you can experiment with.
 
 == Video
 
-video::129621323[vimeo] 
+ifdef::env-github[]
+View the https://vimeo.com/129621323[video] on Vimeo.
 
-Or https://vimeo.com/129621323 if you can't see the embed in GitHub. The demos start about 20 minutes in.
+[TIP]
+====
+To see how videos appear in `.adoc` files, either:
 
-TIP: Build this file locally to HTML with asciidoctor to see how videos render in `.adoc` files
+. View http://gist.asciidoctor.org/?github-jaredmorgs%2FAsciidoctor_Presentation%2F%2FREADME.adoc[this file] on gist.asciidoctor.org
+. View the https://raw.githubusercontent.com/jaredmorgs/Asciidoctor_Presentation/master/README.adoc[raw source] of this file with the Asciidoctor.js Live Preview extension for https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Chrome] or https://addons.mozilla.org/en-US/firefox/addon/asciidoctorjs-live-preview/[Firefox] active
+. Build this file locally:
 
-  $ asciidoctor README.adoc
+ $ asciidoctor README.adoc
++
+then view the generated HTML, README.html, in your browser.
+====
+endif::[]
 
-== Links
+ifndef::env-github[]
+video::129621323[vimeo,960,540] 
+endif::[]
+
+The demos start about 20 minutes into the presentation.
+
+== Resources
 
 Get Learning::
   http://asciidoctor.org/ is the place to go to learn more about the fast text processor & publishing toolchain for converting AsciiDoc to HTML5, DocBook & more. On this landing page, you get links to all Asciidoctor Docs. It's a great resource I refer to regularly when writing. 
