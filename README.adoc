@@ -3,11 +3,15 @@ Files relating to the AsciiDoc presentation showcasing HubPress and Asciidoctor 
 
 == Video
 
-Awaiting Upload...
+video::129621323[vimeo] or https://vimeo.com/129621323 if you can't see the embed in GitHub. This presentation starts about 20 minutes in.
+
+TIP: Build this file locally to HTML with asciidoctor to see how videos render in `.adoc` files
+
+  $ asciidoctor README.adoc
 
 == Files
 
 run-sheet.adoc:: 
-  The 'presentation' I displayed in this video.
-
-
+  The 'presentation' I displayed in the video.
+example.adoc::
+  A very simple AsciiDoc document you can experiment with.
