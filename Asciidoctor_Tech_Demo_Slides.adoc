@@ -53,7 +53,6 @@ Ways you can write AsciiDoc:
 You can use a Google Chrome extension called +Asciidoctor.js Live Preview+ to render a local file in Asciidoctor. While it is available on Chrome and Firefox, the Chrome version also has the advantage of allowing you the choice of stylesheets. It's great for looking at a single file locally without the overhead of running a GUI editor. Quick and simple.
 --
 
-.How To Install Asciidoctor.js Live Preview Extension
 [.step]
 . Open Chrome's Web App Store.
 . Search for "Asciidoctor".
@@ -73,30 +72,32 @@ Get it at http://atom.io. It's free!
 
 == AsciiDoc Live Preview
 
+[NOTE.speaker]
+--
 The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get!
+--
 
-.How To Install AsciiDoc Preview
 [.step]
 . Open Edit=>Preferences=>Packages
 . Search for `asciidoc-preview` and Install.
 . Alternativley , you can download the package from GitHub and add it to `~/.atom/packages`.
-
-.How To Use AsciiDoc Preview
-[.step]
 . Open an AsciiDoc file in Atom.
 . CTRL+SHIFT+A to show.
 
 == Atom Editor AsciiDoc Syntax Highlighting
 
+[NOTE:speaker]
+--
 If you want syntax highlighting for AsciiDoc files, install the +language-asciidoc+ package.
+--
 
-.How To Install language-asciidoc
 [.step]
 . Open Edit=>Preferences=>Packages
 . Search for `language-asciidoc`.
 . Install it like +asciidoc-preview+
 
 == Edit AsciiDoc Directly On GitHub
+
 If you store your docs on GitHub, you can use the site's editor to write in AsciiDoc, and get a basic render of AsciiDoc text.
 
 [NOTE.speaker]
