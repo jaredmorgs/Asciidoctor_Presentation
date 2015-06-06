@@ -1,6 +1,6 @@
 = Working with AsciiDoc and Asciidoctor
 Jared Morgan <jaredleonmorgan@gmail.com>
-:backend: revealjs/revealjs
+:backend: revealjs
 :revealjs_theme: solarized
 :revealjs_controls: true
 :revealjs_slideNumber: true
