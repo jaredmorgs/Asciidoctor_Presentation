@@ -15,15 +15,16 @@ Jared Morgan <jaredleonmorgan@gmail.com>
 == Install Asciidoctor on Linux
 
 For RPM-based systems::
-  `sudo dnf install asciidoctor`
+  `$ sudo dnf install asciidoctor`
 For Debian-based systems::
-  `sudo apt-get install asciidoctor`
+  `$ sudo apt-get install asciidoctor`
 
 == Install Asciidoctor on Windows
 
 . Load http://rubyinstaller.org/[RubyInstaller] site and download the installer.
 . Once Ruby is installed, install Asciidoctor through the command line:
-`gem install asciidoctor`
++
+`$ gem install asciidoctor`
 
 == Install Asciidoctor on Mac
 
@@ -38,11 +39,11 @@ See http://asciidoctor.org/docs/install-asciidoctor-macosx/[Installing Asciidoct
 AsciiDoc is just text. So you can write AsciiDoc documents in anything that you can write plain text in. There are some recommendations for Windows users, such as using anything *but* +notepad+ because it introduces formatting that is not cross-compatible.
 --
 
-Ways you can write AsciiDoc:
+Ways you can write AsciiDoc documents:
 
-* Write in a text editor and preview in Chrome
-* Write offline in GUI Editors such as Atom.io
-* Write online directly in GitHub
+* Write in a text editor and preview in Chrome.
+* Write offline in GUI Editors such as Atom.io.
+* Write online directly in GitHub.
 * Write offline in GitHub, commit changes when online, render to Asciidoctor automatically using Travis CI.
 
 == Text Editor with Chrome Preview
@@ -109,43 +110,46 @@ A GitHub "Forkable" is a repository hosted on GitHub that you can make a copy of
 
 The goal of a good forkable is to get you up and running with a technology quickly.
 
+There are a few forkables that achieve this for new users:
+
+* Jekyll AsciiDoc Quickstart
+* HubPress Blogging Platform
+
 == Jekyll AsciiDoc Quickstart
 
-  * https://github.com/asciidoctor/jekyll-asciidoc-quickstart/blob/master/README.adoc[README.adoc]
-  * Easy way to set up a static single doc site.
-	* Uses Travis-CI to build and stage your guide.
-  * Git-backed so you can write off-line.
-  * Works great on tablets once set up on a PC.
-	* Free.
+* https://github.com/asciidoctor/jekyll-asciidoc-quickstart/blob/master/README.adoc[README.adoc]
+* Easy way to set up a static single doc site.
+* Uses Travis-CI to build and stage your guide.
+* Git-backed so you can write off-line.
+* Works great on tablets once set up on a PC.
+* Free.
 
 == Publishing JAQ Using the AsciiDoctor Toolchain
 
 Publish to HTML::
-	`asciidoctor -a linkcss! -a skip-front-matter index.adoc`
+	`$ asciidoctor -a linkcss! -a skip-front-matter index.adoc`
 Publish to PDF::
 	. http://asciidoctor.org/docs/convert-asciidoc-to-pdf/ for instructions on installing asciidoctor-pdf.
-  . Once the gem is installed, run the build command:
-
-    $ `asciidoctor-pdf -a skip-front-matter index.adoc`.
+	. Once the gem is installed, run the build command:
+	`$ asciidoctor-pdf -a skip-front-matter index.adoc`.
 
 == HubPress Blogging Platform
 
-  * https://github.com/HubPress/hubpress.io/blob/master/README.adoc[README.adoc]
-  * Blogging app using asciidoctor.js
-  * Deployed and hosted on GitHub
-  * Publishes blogs to the static GitHub Pages site.
-  * Free.
+* https://github.com/HubPress/hubpress.io/blob/master/README.adoc[README.adoc].
+* Blogging app using +asciidoctor.js+.
+* Deployed and hosted on GitHub.
+* Publishes blogs to the static GitHub Pages site.
+* Free.
 
 == What You've Learned
 
-* Ways you can view AsciiDoc content easily
-* Ways you can install Asciidoctor on a variety of Operating Systems
-* Ways you can get started quickly with AsciiDoc
+* Ways you can view AsciiDoc content easily.
+* Ways you can install Asciidoctor on a variety of Operating Systems.
+* Ways you can get started quickly with AsciiDoc.
 * Ways you can publish AsciiDoc to different formats.
 
 == How You Can Contact Me
 
-[.step]
 * @jaredmorgs on Twitter
 * +Jared Morgan (jaredmorgs) on Google+
 * jaredleonmorgan@gmail.com
