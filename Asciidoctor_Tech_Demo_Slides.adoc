@@ -1,10 +1,10 @@
 = Working with AsciiDoc and Asciidoctor
 Jared Morgan <jaredleonmorgan@gmail.com>
-:backend: revealjs/revealjs
+:backend: revealjs
 :revealjs_theme: solarized
 :revealjs_controls: true
 :revealjs_slideNumber: true
-:revealjs_transition: convex
+:revealjs_transition: convex 
 
 == What Will You Learn Today?
 
@@ -14,14 +14,13 @@ Jared Morgan <jaredleonmorgan@gmail.com>
 
 == Install Asciidoctor on Linux
 
-[.step]
-* `sudo dnf install asciidoctor` for RPM-based systems
-* or
-* `sudo apt-get install asciidoctor` for Debian-based systems
+For RPM-based systems::
+  `sudo dnf install asciidoctor`
+For Debian-based systems::
+  `sudo apt-get install asciidoctor`
 
 == Install Asciidoctor on Windows
 
-[.step]
 . Load http://rubyinstaller.org/[RubyInstaller] site and download the installer.
 . Once Ruby is installed, install Asciidoctor through the command line:
 `gem install asciidoctor`
@@ -53,7 +52,6 @@ Ways you can write AsciiDoc:
 You can use a Google Chrome extension called +Asciidoctor.js Live Preview+ to render a local file in Asciidoctor. While it is available on Chrome and Firefox, the Chrome version also has the advantage of allowing you the choice of stylesheets. It's great for looking at a single file locally without the overhead of running a GUI editor. Quick and simple.
 --
 
-[.step]
 . Open Chrome's Web App Store.
 . Search for "Asciidoctor".
 . Install the Extension.
@@ -77,7 +75,6 @@ Get it at http://atom.io. It's free!
 The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get!
 --
 
-[.step]
 . Open Edit=>Preferences=>Packages
 . Search for `asciidoc-preview` and Install.
 . Alternativley , you can download the package from GitHub and add it to `~/.atom/packages`.
@@ -86,12 +83,11 @@ The +asciidoc-preview+ package gives you a live rendered preview. It's as close 
 
 == Atom Editor AsciiDoc Syntax Highlighting
 
-[NOTE:speaker]
+[NOTE.speaker]
 --
 If you want syntax highlighting for AsciiDoc files, install the +language-asciidoc+ package.
 --
 
-[.step]
 . Open Edit=>Preferences=>Packages
 . Search for `language-asciidoc`.
 . Install it like +asciidoc-preview+
@@ -122,6 +118,16 @@ The goal of a good forkable is to get you up and running with a technology quick
   * Works great on tablets once set up on a PC.
 	* Free.
 
+== Publishing JAQ Using the AsciiDoctor Toolchain
+
+Publish to HTML::
+	`asciidoctor -a linkcss! -a skip-front-matter index.adoc`
+Publish to PDF::
+	. http://asciidoctor.org/docs/convert-asciidoc-to-pdf/ for instructions on installing asciidoctor-pdf.
+  . Once the gem is installed, run the build command:
+
+    $ `asciidoctor-pdf -a skip-front-matter index.adoc`.
+
 == HubPress Blogging Platform
 
   * https://github.com/HubPress/hubpress.io/blob/master/README.adoc[README.adoc]
@@ -129,18 +135,6 @@ The goal of a good forkable is to get you up and running with a technology quick
   * Deployed and hosted on GitHub
   * Publishes blogs to the static GitHub Pages site.
   * Free.
-
-== Publishing Using the AsciiDoctor Toolchain
-
-Publish to HTML::
-	`asciidoctor -a linkcss! index.adoc`
-Publish to PDF::
-	. http://asciidoctor.org/docs/convert-asciidoc-to-pdf/ for instructions.
-    * Ruby +gem+ available (only very recently), or
-    * Build from source (not as hard as you might think).
-  . Once installed, run the build command:
-
-    $ `asciidoctor-pdf filename.adoc`.
 
 == What You've Learned
 
