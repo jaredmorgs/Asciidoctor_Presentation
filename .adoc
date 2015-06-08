@@ -41,6 +41,7 @@ AsciiDoc is just text. So you can write AsciiDoc documents in anything that you 
 
 Ways you can write AsciiDoc documents:
 
+[.step]
 * Write in a text editor and preview in Chrome.
 * Write offline in GUI Editors such as Atom.io.
 * Write online directly in GitHub.
@@ -50,9 +51,11 @@ Ways you can write AsciiDoc documents:
 
 [NOTE.speaker]
 --
-You can use a Google Chrome extension called +Asciidoctor.js Live Preview+ to render a local file in Asciidoctor. While it is available on Chrome and Firefox, the Chrome version also has the advantage of allowing you the choice of stylesheets. It's great for looking at a single file locally without the overhead of running a GUI editor. Quick and simple.
+While it is available on Chrome and Firefox, the Chrome version also has the advantage of allowing you the choice of stylesheets. It's great for looking at a single file locally without the overhead of running a GUI editor. Quick and simple.
 --
+You can use a Google Chrome extension called +Asciidoctor.js Live Preview+ to render a local file in Asciidoctor. 
 
+[.step]
 . Open Chrome's Web App Store.
 . Search for "Asciidoctor".
 . Install the Extension.
@@ -65,9 +68,9 @@ Go demo the local files permission, and then show the different stylesheets. Als
 
 == Atom.io Editor
 
-Atom Editor is free software compatible for Mac/Windows/Linux
+Atom Editor is a GUI Editor, which is compatible With Linux/Mac/Windows.
 
-Get it at http://atom.io. It's free!
+Get it at http://atom.io.
 
 == AsciiDoc Live Preview
 
@@ -75,7 +78,8 @@ Get it at http://atom.io. It's free!
 --
 The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get!
 --
-[.step, 1000]
+
+[.step]
 . Open Edit=>Preferences=>Packages
 . Search for `asciidoc-preview` and Install.
 . Alternativley , you can download the package from GitHub and add it to `~/.atom/packages`.
@@ -89,6 +93,7 @@ The +asciidoc-preview+ package gives you a live rendered preview. It's as close 
 If you want syntax highlighting for AsciiDoc files, install the +language-asciidoc+ package.
 --
 
+[.step]
 . Open Edit=>Preferences=>Packages
 . Search for `language-asciidoc`.
 . Install it like +asciidoc-preview+
@@ -106,32 +111,47 @@ If you also use a continuous build service like Travis CI, you can save your tex
 
 == AsciiDoctor Forkables
 
-A GitHub "Forkable" is a repository hosted on GitHub that you can make a copy of as a base, then customize and extend it to your requirements.
+A GitHub "Forkable" or "Fork-And_Go" is a repository hosted on GitHub that you can make a copy of as a base, then customize and extend it to your requirements.
 
 The goal of a good forkable is to get you up and running with a technology quickly.
 
-There are a few forkables that achieve this for new users:
+Let's take a look at two that utilize Asciidoctor beautifully:
 
-* Jekyll AsciiDoc Quickstart
+[.step]
+* Jekyll AsciiDoc Quickstart.
 * HubPress Blogging Platform
 
 == Jekyll AsciiDoc Quickstart
 
-* https://github.com/asciidoctor/jekyll-asciidoc-quickstart/blob/master/README.adoc[README.adoc]
+* https://github.com/asciidoctor/jekyll-asciidoc-quickstart/blob/master/README.adoc[README.adoc].
 * Easy way to set up a static single doc site.
 * Uses Travis-CI to build and stage your guide.
 * Git-backed so you can write off-line.
 * Works great on tablets once set up on a PC.
 * Free.
 
-== Publishing JAQ Using the AsciiDoctor Toolchain
+== Publishing JAQ to HTML
 
-Publish to HTML::
-	`$ asciidoctor -a linkcss! -a skip-front-matter index.adoc`
-Publish to PDF::
-	. http://asciidoctor.org/docs/convert-asciidoc-to-pdf/ for instructions on installing asciidoctor-pdf.
-	. Once the gem is installed, run the build command:
-	`$ asciidoctor-pdf -a skip-front-matter index.adoc`.
+Publishing the https://github.com/jaredmorgs/Pinball_Arcade_Users_Guide_Android[Android Users Guide] to HTML takes one short command:
+
+	$ asciidoctor -a skip-front-matter index.adoc`
+
+=== Command Breakdown
+
+	$ asciidoctor -a linkcss! -a skip-front-matter index.adoc`
+
+-a linkcss!::
+	Ensures the default asciidoctor stylesheet is not loaded. I have added the `:linkcss!:` attribute into the `index.html` file so I no longer have to pass this everytime. See 	http://asciidoctor.org/docs/render-documents/#styling-the-html-with-css[Styling HTML with CSS] for more information about this, and some other great tips for rendering a document with Asciidoctor.
+-a skip-front-matter::
+	Because the JAQ uses the Jekyll framework to build the guide, it requires minimal Jekyll front-matter. If you try to publish this with the basic `$ asciidoctor index.adoc` command, the build will fail.
+
+== Publishing JAQ to PDF
+
+See http://asciidoctor.org/docs/convert-asciidoc-to-pdf/[convert AsciiDoc to PDF] for instructions on installing +asciidoctor-pdf+
+
+Once the gem is installed, run the build command:
+
+`$ asciidoctor-pdf -a skip-front-matter index.adoc`.
 
 == HubPress Blogging Platform
 
