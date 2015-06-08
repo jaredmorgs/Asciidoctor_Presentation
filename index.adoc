@@ -68,15 +68,15 @@ Go demo the local files permission, and then show the different stylesheets. Als
 
 == Atom.io Editor
 
-Atom Editor is a GUI Editor, which is compatible With Linux/Mac/Windows.
+Atom Editor is a GUI Editor, which is compatible with Linux/Mac/Windows.
 
-Get it at http://atom.io.
+Get it at http://atom.io and install it.
 
 == AsciiDoc Live Preview
 
 [NOTE.speaker]
 --
-The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get!
+The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get in Atom. And it's FAST and REAL TIME.
 --
 
 [.step]
