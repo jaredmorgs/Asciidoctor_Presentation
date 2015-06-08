@@ -136,14 +136,13 @@ Publishing the https://github.com/jaredmorgs/Pinball_Arcade_Users_Guide_Android[
 
 	$ asciidoctor -a skip-front-matter index.adoc`
 
-=== Command Breakdown
-
-	$ asciidoctor -a linkcss! -a skip-front-matter index.adoc`
-
+[NOTE.speaker]
+--
 -a linkcss!::
 	Ensures the default asciidoctor stylesheet is not loaded. I have added the `:linkcss!:` attribute into the `index.html` file so I no longer have to pass this everytime. See 	http://asciidoctor.org/docs/render-documents/#styling-the-html-with-css[Styling HTML with CSS] for more information about this, and some other great tips for rendering a document with Asciidoctor.
 -a skip-front-matter::
 	Because the JAQ uses the Jekyll framework to build the guide, it requires minimal Jekyll front-matter. If you try to publish this with the basic `$ asciidoctor index.adoc` command, the build will fail.
+--
 
 == Publishing JAQ to PDF
 
