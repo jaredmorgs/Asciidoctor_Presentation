@@ -1,0 +1,175 @@
+= Working with AsciiDoc and Asciidoctor
+Jared Morgan <jaredleonmorgan@gmail.com>
+:backend: revealjs
+:revealjs_theme: solarized
+:revealjs_controls: true
+:revealjs_slideNumber: true
+:revealjs_transition: convex 
+// Build this presentation using asciidoctor -T ../asciidoctor-reveal.js/templates/slim index.adoc
+
+== What Will You Learn Today?
+
+[.step]
+* Commands and procedures you can follow to install Asciidoctor.
+* How to write in AsciiDoc using different tools and methods.
+
+== Install Asciidoctor on Linux
+
+For RPM-based systems::
+  `$ sudo dnf install asciidoctor`
+For Debian-based systems::
+  `$ sudo apt-get install asciidoctor`
+
+== Install Asciidoctor on Windows
+
+. Load http://rubyinstaller.org/[RubyInstaller] site and download the installer.
+. Once Ruby is installed, install Asciidoctor through the command line:
++
+`$ gem install asciidoctor`
+
+== Install Asciidoctor on Mac
+
+Ruby is installed by default on Mac, but you need 1.9.2 at a minimum.
+
+See http://asciidoctor.org/docs/install-asciidoctor-macosx/[Installing Asciidoctor on Mac OSX] for different approaches to installing Asciidoctor on Mac.
+
+== How Do I Write in AsciiDoc
+
+[NOTE.speaker]
+--
+AsciiDoc is just text. So you can write AsciiDoc documents in anything that you can write plain text in. There are some recommendations for Windows users, such as using anything *but* +notepad+ because it introduces formatting that is not cross-compatible.
+--
+
+Ways you can write AsciiDoc documents:
+
+[.step]
+* Write in a text editor and preview in Chrome.
+* Write offline in GUI Editors such as Atom.io.
+* Write online directly in GitHub.
+* Write offline in GitHub, commit changes when online, render to Asciidoctor automatically using Travis CI.
+
+== Text Editor with Chrome Preview
+
+[NOTE.speaker]
+--
+While it is available on Chrome and Firefox, the Chrome version also has the advantage of allowing you the choice of stylesheets. It's great for looking at a single file locally without the overhead of running a GUI editor. Quick and simple.
+--
+You can use a Google Chrome extension called +Asciidoctor.js Live Preview+ to render a local file in Asciidoctor. 
+
+[.step]
+. Open Chrome's Web App Store.
+. Search for "Asciidoctor".
+. Install the Extension.
+. Ensure you set the access to local files permission in `chrome://extensions`
+
+[NOTE.speaker]
+--
+Go demo the local files permission, and then show the different stylesheets. Also demo how you can use command line args to have the extension ignore stuff like Jekyll front matter.
+--
+
+== Atom.io Editor
+
+Atom Editor is a GUI Editor, which is compatible with Linux/Mac/Windows.
+
+Get it at http://atom.io and install it.
+
+== AsciiDoc Live Preview
+
+[NOTE.speaker]
+--
+The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get in Atom. And it's FAST and REAL TIME.
+--
+
+[.step]
+. Open Edit=>Preferences=>Packages
+. Search for `asciidoc-preview` and Install.
+. Alternativley , you can download the package from GitHub and add it to `~/.atom/packages`.
+. Open an AsciiDoc file in Atom.
+. CTRL+SHIFT+A to show.
+
+== Atom Editor AsciiDoc Syntax Highlighting
+
+[NOTE.speaker]
+--
+If you want syntax highlighting for AsciiDoc files, install the +language-asciidoc+ package.
+--
+
+[.step]
+. Open Edit=>Preferences=>Packages
+. Search for `language-asciidoc`.
+. Install it like +asciidoc-preview+
+
+== Edit AsciiDoc Directly On GitHub
+
+If you store your docs on GitHub, you can use the site's editor to write in AsciiDoc, and get a basic render of AsciiDoc text.
+
+[NOTE.speaker]
+--
+Demo how this works using the Android Users Guide.
+Show how you can switch between raw and rendered
+If you also use a continuous build service like Travis CI, you can save your text and see it rendered in Asciidoctor within minutes.
+--
+
+== AsciiDoctor Forkables
+
+A GitHub "Forkable" or "Fork-And-Go" is a repository hosted on GitHub that you can make a copy of as a base, then customize and extend it to your requirements.
+
+The goal of a good forkable is to get you up and running with a technology quickly.
+
+Let's take a look at two that utilize Asciidoctor beautifully:
+
+[.step]
+* Jekyll AsciiDoc Quickstart
+* HubPress Blogging Platform
+
+== Jekyll AsciiDoc Quickstart
+
+* https://github.com/asciidoctor/jekyll-asciidoc-quickstart/blob/master/README.adoc[README.adoc].
+* Easy way to set up a static single doc site.
+* Uses Travis-CI to build and stage your guide.
+* Git-backed so you can write off-line.
+* Works great on tablets once set up on a PC.
+* Free.
+
+== Publishing JAQ to HTML
+
+Publishing the https://github.com/jaredmorgs/Pinball_Arcade_Users_Guide_Android[Android Users Guide] to HTML takes one short command:
+
+`$ asciidoctor -a skip-front-matter index.adoc`
+
+[NOTE.speaker]
+--
+-a linkcss!::
+	Ensures the default asciidoctor stylesheet is not loaded. I have added the `:linkcss!:` attribute into the `index.html` file so I no longer have to pass this everytime. See 	http://asciidoctor.org/docs/render-documents/#styling-the-html-with-css[Styling HTML with CSS] for more information about this, and some other great tips for rendering a document with Asciidoctor.
+-a skip-front-matter::
+	Because the JAQ uses the Jekyll framework to build the guide, it requires minimal Jekyll front-matter. If you try to publish this with the basic `$ asciidoctor index.adoc` command, the build will fail.
+--
+
+== Publishing JAQ to PDF
+
+See http://asciidoctor.org/docs/convert-asciidoc-to-pdf/[convert AsciiDoc to PDF] for instructions on installing +asciidoctor-pdf+
+
+Once the gem is installed, run the build command:
+
+`$ asciidoctor-pdf -a skip-front-matter index.adoc`
+
+== HubPress Blogging Platform
+
+* https://github.com/HubPress/hubpress.io/blob/master/README.adoc[README.adoc].
+* Blogging app using +asciidoctor.js+.
+* Deployed and hosted on GitHub.
+* Publishes blogs to the static GitHub Pages site.
+* Free.
+
+== What You've Learned
+
+* Ways you can view AsciiDoc content easily.
+* Ways you can install Asciidoctor on a variety of Operating Systems.
+* Ways you can get started quickly with AsciiDoc.
+* Ways you can publish AsciiDoc to different formats.
+
+== How You Can Contact Me
+
+* https://twitter.com/jaredmorgs[@jaredmorgs]
+* https://plus.google.com/+JaredMorgan_jaredmorgs/posts/p/pub[+Jared Morgan (jaredmorgs) on Google+]
+* jaredleonmorgan@gmail.com
