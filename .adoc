@@ -75,7 +75,7 @@ Get it at http://atom.io. It's free!
 --
 The +asciidoc-preview+ package gives you a live rendered preview. It's as close to WYSIWYG as you can get!
 --
-
+[.step, 1000]
 . Open Edit=>Preferences=>Packages
 . Search for `asciidoc-preview` and Install.
 . Alternativley , you can download the package from GitHub and add it to `~/.atom/packages`.
